@@ -495,6 +495,7 @@
   }
   @media (max-width: 880px) {
     .svc-hero { grid-template-columns: 1fr; gap: 28px; padding: 20px; }
+    .svc-hero-photo { aspect-ratio: 16/9; min-height: 0; }
   }
 
   .svc-hero-photo {
@@ -1170,7 +1171,7 @@
     display: flex;
     gap: 28px;
     width: max-content;
-    animation: autopark-scroll 70s linear infinite;
+    animation: autopark-scroll 52s linear infinite;
     will-change: transform;
   }
   .autopark-track:hover { animation-play-state: paused; }
@@ -2224,10 +2225,6 @@ function Merch() {
             <p className="merch-aside-lead">
               Худи, футболки и аксессуары LIMMA Drift Club — только для тех, кто был на треке.
             </p>
-            <a href="#merch" className="merch-soon-btn" aria-label="Скоро в продаже" onClick={(e) => e.preventDefault()}>
-              <span>Скоро</span>
-              <span className="arrow">→</span>
-            </a>
           </div>
         </div>
       </div>
