@@ -363,7 +363,10 @@
   .hero-content {
     position: relative; z-index: 3;
     width: 100%;
-    padding: 120px 0 80px;
+    padding: 120px 32px 80px;
+  }
+  @media (max-width: 480px) {
+    .hero-content { padding: 80px 24px 60px; }
   }
   .hero-eyebrow {
     display: inline-flex; align-items: center; gap: 14px;
@@ -379,7 +382,7 @@
     margin: 0 0 24px;
     font-family: var(--font-display);
     font-weight: 600;
-    font-size: clamp(34px, 5vw, 76px);
+    font-size: clamp(22px, 5vw, 76px);
     line-height: 1;
     letter-spacing: -0.02em;
   }
@@ -495,7 +498,6 @@
   }
   @media (max-width: 880px) {
     .svc-hero { grid-template-columns: 1fr; gap: 28px; padding: 20px; }
-    .svc-hero-photo { aspect-ratio: 16/9; min-height: 0; }
   }
 
   .svc-hero-photo {
@@ -508,6 +510,9 @@
     border: 1px solid var(--line);
     overflow: hidden;
     min-height: 480px;
+  }
+  @media (max-width: 880px) {
+    .svc-hero-photo { height: 260px; min-height: 0; aspect-ratio: unset; }
   }
   .svc-hero-photo-grid {
     position: absolute; inset: 0; z-index: 1;
@@ -1171,7 +1176,7 @@
     display: flex;
     gap: 28px;
     width: max-content;
-    animation: autopark-scroll 52s linear infinite;
+    animation: autopark-scroll 40s linear infinite;
     will-change: transform;
   }
   .autopark-track:hover { animation-play-state: paused; }
@@ -1606,16 +1611,6 @@ function Hero() {
           <strong>AMG и M-серия</strong> на профессиональном треке. Без компромиссов. Только трасса, дым и ты.
         </p>
 
-        <div className="hero-cta">
-          <a
-            href="https://t.me/managerlimma"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary"
-          >
-            Связаться с нами <span className="arrow">→</span>
-          </a>
-        </div>
       </div>
 
       <div className="hero-tag-bottom">
