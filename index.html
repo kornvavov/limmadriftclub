@@ -1145,7 +1145,7 @@
   }
   .marquee-track {
     display: flex; gap: 64px; white-space: nowrap;
-    animation: scroll 40s linear infinite;
+    animation: scroll 20s linear infinite;
     font-family: var(--font-display); font-size: clamp(28px, 4vw, 56px);
     color: var(--fg);
     font-weight: 400;
@@ -1176,7 +1176,7 @@
     display: flex;
     gap: 28px;
     width: max-content;
-    animation: autopark-scroll 40s linear infinite;
+    animation: autopark-scroll 32s linear infinite;
     will-change: transform;
   }
   .autopark-track:hover { animation-play-state: paused; }
@@ -1610,6 +1610,12 @@ function Hero() {
         <p className="hero-sub">
           <strong>AMG и M-серия</strong> на профессиональном треке. Без компромиссов. Только трасса, дым и ты.
         </p>
+
+        <div className="hero-cta">
+          <a href="#suth" className="btn btn-ghost">
+            Подробнее <span className="arrow">↓</span>
+          </a>
+        </div>
 
       </div>
 
