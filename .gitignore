@@ -1,3 +1,5 @@
+node_modules/
+dist/
 TZ-prod.md
 uploads/site-idea.md
 assets/background_na.mp4

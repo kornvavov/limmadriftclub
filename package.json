@@ -1,0 +1,29 @@
+{
+  "name": "limmadriftclub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.mjs",
+    "deploy": "npm run build && rsync -avz --delete --exclude 'node_modules' --exclude 'src' --exclude 'uploads' --exclude 'build.mjs' --exclude 'package*.json' --exclude '*.md' --exclude '.git' --exclude '.gitignore' --exclude '.claude' ./ root@31.192.110.175:/var/www/limmadriftclub/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kornvavov/limmadriftclub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kornvavov/limmadriftclub/issues"
+  },
+  "homepage": "https://github.com/kornvavov/limmadriftclub#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.28.6",
+    "@babel/core": "^7.29.0",
+    "@babel/preset-react": "^7.28.5",
+    "esbuild": "^0.28.0"
+  }
+}
